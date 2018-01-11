@@ -41,8 +41,9 @@ class User
         return $this->email;
     }
 
-    public function getPhone() : int
+    public function getPhone(): int
     {
-        return $this->$phone;
+        return $this->phone;
     }
+
 }

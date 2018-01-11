@@ -12,6 +12,8 @@ final class UserCollection
 
     /**
      * @param User $user
+     *
+     * @throws UserEmailNotUniqueException
      */
     public function addUser(User $user)
     {
