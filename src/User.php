@@ -15,6 +15,9 @@ class User
     /** @var  Email */
     private $email;
 
+    /** @var int */
+    private $phone = 0;
+
     /**
      * User constructor.
      *
@@ -36,6 +39,11 @@ class User
     public function getEmail() : Email
     {
         return $this->email;
+    }
+
+    public function getPhone(): int
+    {
+        return $this->phone;
     }
 
 }
