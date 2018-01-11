@@ -2,7 +2,6 @@
 
 namespace Tdd\ValueObjects;
 
-
 class Name
 {
     /** @var  string */
@@ -24,5 +23,4 @@ class Name
     {
         return $this->firstName . " " . $this->lastName;
     }
-
 }

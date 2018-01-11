@@ -2,7 +2,6 @@
 
 namespace Tdd\ValueObjects;
 
-
 class Description
 {
     /** @var  string */

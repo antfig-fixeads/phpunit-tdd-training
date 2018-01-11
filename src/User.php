@@ -2,7 +2,6 @@
 
 namespace Tdd;
 
-
 use Tdd\ValueObjects\Email;
 use Tdd\ValueObjects\Name;
 
@@ -30,7 +29,6 @@ class User
         $this->email = $email;
     }
 
-
     public function getName() : Name
     {
         return $this->name;
@@ -45,5 +43,4 @@ class User
     {
         return $this->phone;
     }
-
 }

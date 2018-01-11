@@ -30,5 +30,4 @@ class UserTest extends TestCase
     {
         $this->assertEquals(0, $this->user->getPhone());
     }
-
 }

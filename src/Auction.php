@@ -2,7 +2,6 @@
 
 namespace Tdd;
 
-
 use Money\Money;
 use Tdd\Exception\AuctionStartDateBiggerThanEndDateException;
 use Tdd\Exception\BidDateNotBetweenStartAndEndDateException;
@@ -53,7 +52,6 @@ final class Auction
         $this->endDate = $endDate;
         $this->seller = $seller;
         $this->startingPrice = $startingPrice;
-
     }
 
     /**
@@ -124,7 +122,6 @@ final class Auction
     protected function ensureBidIsBiggerThanPrevious(Bid $bid)
     {
         if (!empty($this->bids)) {
-
             $lastBid = end($this->bids);
 
             if ($bid->getPrice()->lessThanOrEqual($lastBid->getPrice())) {
@@ -133,7 +130,6 @@ final class Auction
 
             reset($this->bids);
         }
-
     }
 
     /**
@@ -149,5 +145,4 @@ final class Auction
             throw new BidDateNotBetweenStartAndEndDateException();
         }
     }
-
 }

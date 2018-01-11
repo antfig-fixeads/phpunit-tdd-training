@@ -28,7 +28,6 @@ class UserCollectionTest extends TestCase
         $this->assertContains($userFoo, $this->userCollection->getUsers());
 
         return $this->userCollection;
-
     }
 
     /**
@@ -44,5 +43,4 @@ class UserCollectionTest extends TestCase
 
         $userCollection->addUser($userSameEmail);
     }
-
 }

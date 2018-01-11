@@ -2,7 +2,6 @@
 
 namespace Tdd;
 
-
 use Tdd\Exception\UserEmailNotUniqueException;
 
 final class UserCollection
@@ -40,5 +39,4 @@ final class UserCollection
     {
         return $this->users;
     }
-
 }

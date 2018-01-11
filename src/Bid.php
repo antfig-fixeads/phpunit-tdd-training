@@ -8,7 +8,6 @@
 
 namespace Tdd;
 
-
 use Money\Money;
 
 class Bid
@@ -50,6 +49,4 @@ class Bid
     {
         return $this->date;
     }
-
-
 }

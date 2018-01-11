@@ -2,7 +2,6 @@
 
 namespace Tdd;
 
-
 use Money\Currency;
 use Money\Money;
 use PHPUnit\Framework\TestCase;
@@ -37,11 +36,13 @@ class AuctionTest extends TestCase
 
         $this->buyer = new User(new Name('John', 'Travolta'), new Email('john@travolta.com'));
 
-        $this->auction = new Auction(new Description('some text'),
+        $this->auction = new Auction(
+            new Description('some text'),
             new \DateTime('2017-01-25 12:08:08'),
             new \DateTime('2017-01-25 18:01:01'),
             $this->seller,
-            new Money(2, $this->currency));
+            new Money(2, $this->currency)
+        );
     }
 
     public function testAuctionHasDescription()
@@ -63,11 +64,13 @@ class AuctionTest extends TestCase
     {
         $this->expectException(AuctionStartDateBiggerThanEndDateException::class);
 
-        new Auction(new Description('some text'),
+        new Auction(
+            new Description('some text'),
             new \DateTime('2017-01-25 12:08:08'),
             new \DateTime('2017-01-24 18:01:01'),
             $this->seller,
-            new Money(2, $this->currency));
+            new Money(2, $this->currency)
+        );
     }
 
     public function testAuctionHasASeller()
@@ -125,7 +128,5 @@ class AuctionTest extends TestCase
 
         $bidTwo = new Bid(new Money(2, $this->currency), $this->buyer, new \DateTime('2017-01-25 13:18:08'));
         $this->auction->addBid($bidTwo);
-
     }
-
 }
